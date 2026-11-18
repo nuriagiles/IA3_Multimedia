@@ -1,0 +1,290 @@
+/*Codigo general sin aplicar ningun flex*/
+*{
+    margin: 0;
+}
+main{
+    width: min-content;
+    justify-self: center;
+}
+body{
+    background-color: #0D101F;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+p, h1, h2, h3, a{
+    animation: textoAparecer 800ms ease-out;
+
+}
+/*header*/
+header{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid white;    
+}
+
+nav ul{
+    display: flex;
+    gap: 40px;
+}
+nav ul li{
+    list-style: none;
+    
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    transition: 0.5s linear;
+}
+nav ul li a:hover{
+    text-decoration: underline;
+    color: #9465FF;
+}
+.logo-tipo-container{
+    display: flex;
+    align-items: center;
+}
+.logo-tipo-container p{
+    font-size: 20px;
+}
+.logotipo-div{
+    width: 5px;
+    height: 5px;
+    background-color: #9465FF;
+    margin-top: 8px;
+    margin-left: 8px;
+}
+
+/*Section 1*/
+.section-1{
+    margin-top: 80px;
+}
+/*div-> estudio container*/
+.Estudio-container h1{
+    color: #C0A6FF;
+    font-size: 10px;
+
+}
+.Estudio-container h2{
+    font-size: 45px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.Estudio-container p{
+    margin-bottom: 20px;
+}
+.Estudio-container button{
+    background-color: #9365FF;
+    border-radius: 10px;
+    border-style: none;
+    height: 50px;
+    color: white;
+    transition: 1s;
+}
+.Estudio-container button:hover{
+    transform: scale(1.1);
+    filter: contrast(0.8);
+}
+.Estudio-container button:active{
+    transform: scale(0.8);
+    filter: contrast(0.8);
+}
+.color-morado{
+    color: #C1A9FF;
+}
+
+/*div->  nova emblema*/
+.anillo-1{
+    background-color: none;
+    width: 200px;
+    height: 200px;
+    border: 1px solid #574876;
+    border-radius: 100%;
+
+}
+.anillo-1 img{
+    animation: logoAnima 3s infinite ease-in-out;
+    transition: 0.5s;
+}
+.anillo-2{
+    background-color: none;
+    width: 280px;
+    height: 280px;
+    border: 1px solid #574876;
+    border-radius: 100%;
+    justify-items: center;
+    align-content: center;
+}
+/*section 2*/
+.section-2 h1{
+    color: #C0A6FF;
+    font-size: 10px;
+    margin-bottom: 20px;
+}
+.proyectos-texto h2{
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+.proyectos-texto p{
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+/*cartas*/
+.card:first-child{
+    animation: cardsAnima 800ms linear;
+}
+.card-2{
+    animation: cardsAnima 2000ms ease-out;
+}
+.card:last-child{
+    animation: cardsAnima 2600ms ease-in-out;
+}
+.card{
+    width: 300px;
+    height: 300px;
+    background-color: #191D31;
+    border-radius: 15px;
+    align-content: center;
+    text-align: center;
+}
+.img-div{
+    overflow: hidden;
+}
+.img-div img{
+    width: 250px;
+    transition: 0.5s;
+}
+
+.img-div img:hover{
+    transform: scale(1.1);
+
+}
+
+.card-texto{
+    text-align: start;
+    margin-left: 30px;
+    margin-top: 20px;
+    line-height: 30px;
+}
+.card-texto p{
+    color: #64697E;
+    font-size: 12px;
+}
+
+/*FOOTER*/
+footer{
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid white;
+    padding: 20px 20px 20px 20px;
+}
+
+/*Adaptado al Movil*/
+@media (min-width: 375px){
+    header{
+        justify-content: space-evenly;
+        padding: 5px 10px 20px 10px;
+    }
+
+    .Estudio-container{
+        margin: 20px;
+    }
+    .nova-emblema-container{
+        justify-items: center;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    .anillo-1{
+        border: 0px;
+    }
+    .section-2{
+        margin: 20px;
+    }
+    .card{
+        margin-bottom: 20px;
+    }
+    .movil-texto{
+        display: none;
+    }
+}
+/*Adaptado en pc*/
+@media (min-width: 1024px){
+    header{
+        justify-content: space-between;
+        padding: 10px 30px 40px 30px;
+    }
+    .section-1{
+        display: flex;
+        justify-content: center;
+    }
+    .anillo-1{
+        border: 1px solid #574876;
+    }
+    .section-2{
+        justify-self: center;
+    }
+    .proyectos-texto{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .cards-container{
+        display: flex;
+        gap: 30px;
+    }
+    .movil-texto{
+        display: flex;
+    }
+}
+
+/*logo animacion*/
+@keyframes logoAnima {
+    0%{
+        transform: translateY(0px) rotate(15deg);
+    }
+    50%{
+        transform: translateY(-20px) rotate(15deg);
+    }
+    100%{
+        transform: translateY(0px) rotate(15deg);
+
+    }
+}
+@keyframes liAnima {
+    0%{
+        transform: translateX(-10px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+@keyframes textoAparecer {
+    0%{
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    50%{
+        opacity: 0.5;
+        transform: translateY(-10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes cardsAnima {
+     0%{
+        opacity: 0;
+        transform: translateX(10px);
+    }
+    50%{
+        opacity: 0.5;
+        transform: translateX(5px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }   
+}
